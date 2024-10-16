@@ -32,14 +32,19 @@ namespace HundredtalSpil
         private void RNG()
         {
             Random rnd = new Random();
-            RNGNumber = rnd.Next(10,100);
+            RNGNumber = rnd.Next(11,100);
             RandomNumber.Text = Convert.ToString(RNGNumber);
         }
         private void CheckButton_Click(object sender, EventArgs e)
         {
+
             if (Convert.ToInt16(textAdd10.Text) == 0 || Convert.ToInt16(textRemove10.Text) == 0 || Convert.ToInt16(textAdd1.Text) == 0 || Convert.ToInt16(textRemove1.Text) == 0)
             {
                 MessageBox.Show("Du skal skrive i alle boxes");
+            }
+            else if (Convert.ToInt16(textAdd10.Text) != 0 && Convert.ToInt16(textRemove10.Text) == 0   || Convert.ToInt16(textAdd1.Text) == 0 || Convert.ToInt16(textRemove1.Text) == 0)
+            {
+
             }
             else
             {
@@ -48,6 +53,8 @@ namespace HundredtalSpil
                 Add10();
                 Remove10();
             }
+           
+
         }
         private void Add1()
         {
@@ -95,7 +102,6 @@ namespace HundredtalSpil
                 textRemove1.BackColor = Color.Red;
             }
         }
-
         private void Remove10()
         {
             int BoxNum;
@@ -111,25 +117,7 @@ namespace HundredtalSpil
                 textRemove10.BackColor = Color.Red;
             }
         }
-
-        
-
-        private void textAdd10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textRemove1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textAdd1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textRemove10_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
@@ -150,6 +138,11 @@ namespace HundredtalSpil
         private void button1_Click(object sender, EventArgs e)
         {
             Restart();
+        }
+
+        private void Points_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

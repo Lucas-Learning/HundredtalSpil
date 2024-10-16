@@ -48,7 +48,7 @@
             this.textAdd10.TabIndex = 0;
             this.textAdd10.Text = "0";
             this.textAdd10.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textAdd10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAdd10_KeyPress);
+            this.textAdd10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPress);
             // 
             // textRemove10
             // 
@@ -58,7 +58,7 @@
             this.textRemove10.Size = new System.Drawing.Size(125, 44);
             this.textRemove10.TabIndex = 1;
             this.textRemove10.Text = "0";
-            this.textRemove10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRemove10_KeyPress);
+            this.textRemove10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPress);
             // 
             // textAdd1
             // 
@@ -68,7 +68,7 @@
             this.textAdd1.Size = new System.Drawing.Size(125, 44);
             this.textAdd1.TabIndex = 2;
             this.textAdd1.Text = "0";
-            this.textAdd1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textAdd1_KeyPress);
+            this.textAdd1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPress);
             // 
             // textRemove1
             // 
@@ -78,7 +78,7 @@
             this.textRemove1.Size = new System.Drawing.Size(125, 44);
             this.textRemove1.TabIndex = 3;
             this.textRemove1.Text = "0";
-            this.textRemove1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRemove1_KeyPress);
+            this.textRemove1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxKeyPress);
             // 
             // RandomNumber
             // 
@@ -108,6 +108,7 @@
             this.Points.Size = new System.Drawing.Size(13, 13);
             this.Points.TabIndex = 6;
             this.Points.Text = "0";
+            this.Points.Click += new System.EventHandler(this.Points_Click);
             // 
             // CheckButton
             // 
